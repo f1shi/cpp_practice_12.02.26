@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int A;
+    cin >> A;
+    int val1 = 0;
+    int val2 = 1;
+    int count = 3;
+    while (true) {
+        int valSum = val1 + val2;
+        if (valSum > A) {
+            cout << "-1";
+            break;
+        } //предусмотрен выход из цикла, если обрабатываемое число превышает заданное
+        if (valSum == A) {
+            cout << count;
+            break;
+        }
+        val1 = val2;
+        val2 = valSum; // идем дальше по списку фибоначи
+        count++;
+    }
+}
